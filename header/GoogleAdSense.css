@@ -1,0 +1,27 @@
+#content {
+        margin: 2.5em 0 0 12.2em !important;
+        padding: 0 1em 1em 1em !important;
+        position: relative;
+        z-index: 2;
+ }
+#column-google {
+        margin: 2em 0 0.5em 0;
+}
+#column-one {
+        padding-top: 40px !important;
+}
+#p-cactions {
+        position: absolute;
+        top: 10.7em !important;
+        left: 11.5em;
+        margin: 0;
+        white-space: nowrap;
+        width: 76%;
+        line-height: 1.1em;
+        overflow: visible;
+        background: none;
+        border-collapse: collapse;
+        padding-left: 1em;
+        list-style: none;
+        font-size: 95%;
+}

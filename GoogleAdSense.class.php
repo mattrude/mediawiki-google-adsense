@@ -24,7 +24,7 @@ class GoogleAdSense {
 			return $bar;
 		}
 		if( !$wgUser->isLoggedIn() ) {
-			require_once( "/var/www/wiki.mattrude.com/extensions/GoogleAdSense-header/GoogleAdSense.php" );
+			require_once( "header/GoogleAdSense.php" );
 		}
 		if( !$wgGoogleAdSenseSrc ) {
 			return $bar;
