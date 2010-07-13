@@ -11,7 +11,8 @@
  *
  * @addtogroup Extensions
  * @author Siebrand Mazeland
- * @license MIT
+ * @author Matt Rude
+ * @license GPL
  */
 
 /**
