@@ -3,9 +3,9 @@
 Add the following to your LocalSettings.php file
 
 ### Google AdSense Extenstion ###
-require_once( "$IP/extensions/GoogleAdSense-sidebar/GoogleAdSense.php" );
-$wgGoogleAdSenseClient = 'pub-4278475968017396';
-$wgGoogleAdSenseSlot = '5426528882';
+require_once( "$IP/extensions/mediawiki-google-adsense/GoogleAdSense.php" );
+$wgGoogleAdSenseClient = 'pub-4272474988067896';
+$wgGoogleAdSenseSlot = '5426528782';
 $wgGoogleAdSenseID = 'wikisidebar';
 $wgGoogleAdSenseWidth  = 120;
 $wgGoogleAdSenseHeight = 600;
