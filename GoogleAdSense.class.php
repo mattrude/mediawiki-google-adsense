@@ -23,25 +23,21 @@ class GoogleAdSense {
 		if( $wgUser->isLoggedIn() && $wgGoogleAdSenseAnonOnly ) {
 			return $bar;
 		}
-		if( !$wgUser->isLoggedIn() ) {
-			require_once( "header/GoogleAdSense.php" );
-		}
 		if( !$wgGoogleAdSenseSrc ) {
 			return $bar;
 		}
 
 		wfLoadExtensionMessages( 'GoogleAdSense' );
-		$bar['googleadsense'] = "<script type=\"text/javascript\">
-/* <![CDATA[ */
-google_ad_client = \"$wgGoogleAdSenseClient\";
-/* $wgGoogleAdSenseID */
-google_ad_slot = \"$wgGoogleAdSenseSlot\";
-google_ad_width = ".intval($wgGoogleAdSenseWidth).";
-google_ad_height = ".intval($wgGoogleAdSenseHeight).";
-/* ]]> */
+		$bar['googleadsense'] = "<script type='text/javascript'><!--
+google_ad_client = 'ca-pub-4278475968017396';
+/* WIKI-Sidebar */
+google_ad_slot = '2608059619';
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
 </script>
-<script type=\"text/javascript\"
-src=\"$wgGoogleAdSenseSrc\">
+<script type='text/javascript'
+src='http://pagead2.googlesyndication.com/pagead/show_ads.js'>
 </script>";
 		return true;
 	}

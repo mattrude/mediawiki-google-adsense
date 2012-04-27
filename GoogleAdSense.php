@@ -15,12 +15,43 @@
  * @license GPL
  */
 
+
+
+/**********************************************************
+ *         To Install
+ *
+ *  Add <?php GoogleAdSenseHeader(); ?> to the skins/Vector.php file
+ *    around line 147
+ *
+ */
+
 /**
  * Exit if called outside of MediaWiki
  */
 if( !defined( 'MEDIAWIKI' ) ) {
 	echo( "This file is an extension to the MediaWiki software and cannot be used standalone.\n" );
 	die( 1 );
+}
+
+function GoogleAdSenseHeader() { 
+	global $wgUser;
+	if( !$wgUser->isLoggedIn() ) { ?>
+		<!-- Google AdSense -->
+                <div id="column-google" style="text-align: center;padding: 5px;">
+		<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4278475968017396";
+			/* wiki-header */
+			google_ad_slot = "3175910131";
+			google_ad_width = 728;
+			google_ad_height = 90;
+			//-->
+		</script>
+		<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+                </div>
+                <!-- end of Google Adsense --><?php
+	}
 }
 
 /**
@@ -62,6 +93,3 @@ $wgExtensionMessagesFiles['GoogleAdSense'] = $dir . 'GoogleAdSense.i18n.php';
 
 // Hook to modify the sidebar
 $wgHooks['SkinBuildSidebar'][] = 'GoogleAdSense::GoogleAdSenseInSidebar';
-
-// Hook to inject CSS - currently disabled, because it does not add the CSS somehow
-//$wgHooks['OutputPageBeforeHTML'][] = 'GoogleAdSense::injectCSS';
